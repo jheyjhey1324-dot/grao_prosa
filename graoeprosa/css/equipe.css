@@ -1,0 +1,231 @@
+/* Caixa de boas-vindas sobre o banner */
+.titulo-pagina {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 90%;
+    max-width: 800px;
+    margin: -3.5rem auto 0;
+}
+
+.titulo-pagina h1 {
+    margin: 0 0 0.5rem;
+}
+
+.titulo-pagina p {
+    margin: 0;
+}
+
+/* Grade que organiza os <article> lado a lado */
+.grid-cards-equipe {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 2.5rem auto;
+  padding: 0 1.2rem;
+}
+
+/* Estilo individual de cada card (<article>) */
+.card-membro {
+  background-color: #f4ece1;
+  border: 3px solid #1a110b;
+  box-shadow: 6px 6px 0px #2b1d14;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Garante que a imagem respeite as bordas arredondadas/retas */
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.card-membro.destacado {
+    z-index: 2;
+    transform: translateY(-8px) scale(1.03);
+}
+
+.caixa-texto-membro h2 {
+  margin-top: 13px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.caixa-texto-membro p {
+  margin: 0;
+  padding: 12px 10px; /* Reduz o espaçamento lateral para o texto aproveitar melhor a caixa */
+  box-sizing: border-box;
+  text-align: center; /* Garante que o texto de descrição também fique centralizado */
+}
+
+.avaliacao {
+    text-align: center;
+}
+
+.estrelas-card {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 2px;
+    background-color: #fffdf9;
+    border: 2px solid #1a110b; /* Caixa com borda ao redor de tudo */
+    border-radius: 4px;        /* Opcional: cantos levemente arredondados ou retos */
+    padding: 6px 12px;         /* Diminui o espaçamento interno */
+    
+    width: fit-content;        /* Faz a caixinha ter o tamanho exato das estrelas */
+    margin: 15px auto 0 auto;  /* Aproxima do texto acima e centraliza a caixa no card */
+    box-shadow: 2px 2px 0px #2b1d14; /* Sombra retrô */
+}
+
+.estrelas-card input {
+    display: none;
+}
+
+.estrelas-card label {
+    font-size: 22px;
+    color: #b0a499; /* Cinza padrão */
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+/* Fica dourado ao passar o mouse ou selecionar */
+.estrelas-card input:checked ~ label,
+.estrelas-card label:hover,
+.estrelas-card label:hover ~ label {
+    color: #e5a93b; /* Dourado */
+}
+
+
+.rodape {
+    margin-top: 3rem;
+    padding: 2rem 1.5rem 1.2rem;
+    background: var(--preto);
+    color: var(--bege);
+    border-top: 6px solid var(--vinho);
+}
+
+.rodape-grade {
+    display: flex;
+    justify-content: space-between; /* Joga um bloco na extrema esquerda e o outro na extrema direita */
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto 1.5rem;
+    padding: 0 1rem; /* Garante um respiro nas bordas extremas da página */
+}
+
+/* Esquerda: Links empilhados */
+.rodape-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.rodape-links a {
+    color: var(--marrom-claro);
+    font-family: var(--fonte-texto);
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.1s;
+}
+
+.rodape-links a:hover,
+.rodape-links a:focus-visible {
+    color: var(--bege);
+    transform: translateX(4px);
+}
+
+/* Direita: Logo e texto alinhados à direita da página */
+.rodape-direita {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Joga a logo e o texto colados na margem direita */
+    text-align: right;
+    gap: 0.8rem;
+}
+
+.rodape-direita .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    color: var(--bege);
+}
+
+.rodape-direita img {
+    image-rendering: pixelated;
+}
+
+.rodape-direita p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    max-width: 260px;
+    color: var(--bege);
+}
+
+/* Base: Linha tracejada (trilhadinho) e direitos centralizados */
+.rodape-copyright {
+    border-top: 2px dashed var(--marrom-escuro);
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.rodape-copyright p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--bege);
+}
+
+/* Responsividade para celulares */
+@media (max-width: 760px) {
+    .rodape-grade {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .rodape-links {
+        align-items: center;
+    }
+
+    .rodape-direita {
+        align-items: center;
+        text-align: center;
+    }
+
+    .rodape-direita p {
+        margin: 0 auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card-membro {
+        transition: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
