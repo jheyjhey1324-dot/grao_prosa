@@ -1,0 +1,231 @@
+/* Blocos do formulário */
+.formulario {
+    width: 92%;
+    max-width: 1280px;
+    margin: 0 auto 2.5rem;
+}
+
+.formulario > fieldset {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem 1.2rem;
+    min-width: 0;
+    margin: 0 0 2rem;
+    padding: 1.8rem 1.2rem 1.2rem;
+    border: 4px solid var(--preto);
+    box-shadow: 4px 4px 0 var(--marrom-escuro);
+}
+
+.formulario > fieldset > legend {
+    padding: 0.4rem 1rem;
+    font-family: var(--fonte-titulo);
+    font-size: 0.8rem;
+    color: var(--vinho);
+    background: var(--rose);
+    border: 4px solid var(--preto);
+    box-shadow: 3px 3px 0 var(--marrom-escuro);
+}
+
+/* Ícones das etiquetas */
+.formulario > fieldset > legend::before {
+    content: "";
+    display: inline-block;
+    margin-right: 0.6rem;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    image-rendering: pixelated;
+}
+
+.icone-pessoa::before {
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/icones/pessoa.svg");
+}
+
+.icone-calendario::before {
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/icones/calendario.svg");
+}
+
+.icone-balao::before {
+    width: 28px;
+    height: 22px;
+    background-image: url("../img/icones/balao.svg");
+}
+
+/* Ambiente, bolinhas e caixa de autorização */
+.grupo-ambiente {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.grupo-ambiente > legend {
+    padding: 0;
+    margin-bottom: 0.3rem;
+    font-size: 1.4rem;
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.grupo-ambiente .opcao {
+    padding: 0.3rem 0.8rem;
+    background: var(--campo);
+    border: 4px solid var(--preto);
+    box-shadow: 3px 3px 0 var(--marrom-escuro);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 1.4rem;
+    height: 1.4rem;
+    accent-color: var(--vinho);
+    cursor: pointer;
+}
+
+/* Botões do formulário */
+.acoes {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Telas largas: colunas diferentes em cada bloco (por último, para vencer as regras acima) */
+@media (min-width: 1000px) {
+    .formulario > .bloco-dados {
+        grid-template-columns: 1.3fr 1.2fr 1fr;
+    }
+
+    .formulario > .bloco-reserva {
+        grid-template-columns: 1fr 1fr 0.8fr 2fr;
+    }
+
+    .bloco-reserva .grupo-ambiente {
+        grid-column: auto;
+    }
+
+    .formulario > .bloco-detalhes {
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+    }
+}
+
+
+.rodape {
+    margin-top: 3rem;
+    padding: 2rem 1.5rem 1.2rem;
+    background: var(--preto);
+    color: var(--bege);
+    border-top: 6px solid var(--vinho);
+}
+
+.rodape-grade {
+    display: flex;
+    justify-content: space-between; /* Joga um bloco na extrema esquerda e o outro na extrema direita */
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto 1.5rem;
+    padding: 0 1rem; /* Garante um respiro nas bordas extremas da página */
+}
+
+/* Esquerda: Links empilhados */
+.rodape-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.rodape-links a {
+    color: var(--marrom-claro);
+    font-family: var(--fonte-texto);
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.1s;
+}
+
+.rodape-links a:hover,
+.rodape-links a:focus-visible {
+    color: var(--bege);
+    transform: translateX(4px);
+}
+
+/* Direita: Logo e texto alinhados à direita da página */
+.rodape-direita {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Joga a logo e o texto colados na margem direita */
+    text-align: right;
+    gap: 0.8rem;
+}
+
+.rodape-direita .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    color: var(--bege);
+}
+
+.rodape-direita img {
+    image-rendering: pixelated;
+}
+
+.rodape-direita p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    max-width: 260px;
+    color: var(--bege);
+}
+
+/* Base: Linha tracejada (trilhadinho) e direitos centralizados */
+.rodape-copyright {
+    border-top: 2px dashed var(--marrom-escuro);
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.rodape-copyright p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--bege);
+}
+
+/* Responsividade para celulares */
+@media (max-width: 760px) {
+    .rodape-grade {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .rodape-links {
+        align-items: center;
+    }
+
+    .rodape-direita {
+        align-items: center;
+        text-align: center;
+    }
+
+    .rodape-direita p {
+        margin: 0 auto;
+    }
+}
