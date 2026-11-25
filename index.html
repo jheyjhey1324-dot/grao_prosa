@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grão &amp; Prosa | Início</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="js/menu.js" defer></script>
+    <script src="js/validacao.js" defer></script>
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+    <div class="top-bar"></div>
+    <header class="topo">
+        <a class="logo" href="index.html">
+            <img src="img/logo.png" alt="" width="53" height="56">
+            <span>Grão &amp; Prosa</span>
+        </a>
+
+        <button id="btn-menu" class="btn-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>       
+        <nav id="menu" class="menu" aria-label="Menu principal">
+            
+            <ul>
+                <li><a href="index.html" aria-current="page">Início</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
+                <li><a href="form.html">Reservas</a></li>
+                <li><a href="about.html">Sobre</a></li>
+            </ul>
+        </nav>
+        <!-- Ícones -->
+        <div class="acoes">
+            <a href="entrar.html" aria-label="Minha conta">
+                <i class="bi bi-person"></i>
+            </a>
+            
+            <a href="carrinho.html" aria-label="Meu carrinho">
+                <i class="bi bi-cart3"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img class="banner" src="img/local/balcao.png" alt="Balcão da cafeteria Grão &amp; Prosa com máquina de café e vitrine de pães">
+            <div class="boas-vindas caixa">
+                <div>
+                    <h1>Seja bem-vindo!</h1>
+                    <p>Aqui, o café encontra boas conversas.</p>
+                </div>
+            <a class="botao" href="cardapio.html">Confira nosso menu de comidas →</a>
+            </div>
+        </section>
+        <section class="destaques">
+            <article class="caixa cartao">
+                <img class="cartao-icone" src="img/destaques/cafe_pixel.png" alt="" width="150" height="150">
+                <h2>Nosso Café</h2>
+                <p>Grãos selecionados para um sabor único.</p>
+                <a class="botao" href="cardapio.html">Saiba mais</a>
+            </article>
+            <article class="caixa cartao">
+                <img class="cartao-icone" src="img/destaques/bolo_pixel.png" alt="" width="150" height="150">
+                <h2>Doces e Delícias</h2>
+                <p>Sobremesas artesanais para adoçar seu dia</p>
+                <a class="botao" href="cardapio.html">Saiba mais</a>
+            </article>
+            <article class="caixa cartao">
+                <img class="cartao-icone" src="img/destaques/cadeiras_pixel.png" alt="" width="150" height="150">
+                <h2>Nosso Espaço</h2>
+                <p>Um ambiente acolhedor para todos os tipos de prosas.</p>
+                <a class="botao" href="form.html">Faça sua reserva</a>
+            </article>
+        </section>
+        <!-- SEÇÃO DE AVALIAÇÕES AUTOMÁTICAS (VIA CSS) -->
+        <section class="secao-avaliacoes-auto">
+            <div class="cabecalho-avaliacoes">
+                <h2>Aqui nossos clientes têm preferência máxima, pensamos em cada detalhe para não nos limitarmos a ser uma cafeteria que faz cafés, mas um ambiente que possibilita encontros, memórias e histórias incríveis!</h2>
+                <p>Confira o que os nossos clientes comentam:</p>
+            </div>
+            <div class="carrossel-simples">
+                <div class="trilho-infinito">
+                    <!-- Card 1 -->
+                    <article class="card-avaliacao-medio">
+                        <div class="card-topo">
+                            <img src="img/clientes/clientesuelen.png" alt="Foto de Suelen" class="avatar-cliente">
+                            <div class="info-principal">
+                                <h3>Suelen Cristina</h3>
+                                <div class="estrelas">★★★★★</div>
+                            </div>
+                        </div>
+                        <span class="data-avaliacao">12/10/2026</span>
+                        <p class="texto-comentario">"O café coado na hora e o bolo de cenoura são perfeitos!"</p>
+                    </article>
+                    <!-- Card 2 -->
+                    <article class="card-avaliacao-medio">
+                        <div class="card-topo">
+                            <img src="img/clientes/clientematheus.png" alt="Foto de Matheus" class="avatar-cliente">
+                            <div class="info-principal">
+                                <h3>Matheus Cunha</h3>
+                                <div class="estrelas">★★★★★</div>
+                            </div>
+                        </div>
+                        <span class="data-avaliacao">28/10/2026</span>
+                        <p class="texto-comentario">"Atendimento impecável da Diana! A estética retrô do lugar é incrível."</p>
+                    </article>
+                    <!-- Card 3 -->
+                     <article class="card-avaliacao-medio">
+                        <div class="card-topo">
+                            <img src="img/clientes/clientethelma.png" alt="Foto de Thelma" class="avatar-cliente">
+                            <div class="info-principal">
+                                <h3>Thelma Alves</h3>
+                                <div class="estrelas">★★★★☆</div>
+                            </div>
+                        </div>
+                        <span class="data-avaliacao">05/11/2026</span>
+                        <p class="texto-comentario">"Bonito e aconchegante!"</p>
+                    </article>
+                    <!-- Card 4 -->
+                    <article class="card-avaliacao-medio">
+                        <div class="card-topo">
+                            <img src="img/clientes/clientevivaldo.png" alt="Foto do Vivaldo" class="avatar-cliente">
+                            <div class="info-principal">
+                                <h3>Vivaldo Pinheiro</h3>
+                                <div class="estrelas">★★★★☆</div>
+                            </div>
+                        </div>
+                        <span class="data-avaliacao">15/09/2026</span>
+                        <p class="texto-comentario">"Um lugar aconchegante e feito para passar a tarde. Os funcionários são muito simpáticos e os doces são de valores acessíveis."</p>
+                   </article>
+                    <!-- Card 5 -->
+                    <article class="card-avaliacao-medio">
+                        <div class="card-topo">
+                            <img src="img/clientes/clientemicaela.png" alt="Foto de Micaela" class="avatar-cliente">
+                            <div class="info-principal">
+                                <h3>Micaela Giovana</h3>
+                                <div class="estrelas">★★★★★</div>
+                            </div>
+                        </div>
+                        <span class="data-avaliacao">09/11/2026</span>
+                        <p class="texto-comentario">"Fui conhecer o café com a minha irmã e nosso gatinho Aquiles e amei a experiência! A recepção da Leona é a melhor do universo! Que menina mais atenciosa, com certeza eu, Isabela e Aquiles iremos voltar!"</p>
+                    </article>
+                    <!-- Card 6 -->
+                    <article class="card-avaliacao-medio">
+                        <div class="card-topo">
+                            <img src="img/clientes/clienteisabela.png" alt="Foto de Isabela" class="avatar-cliente">
+                            <div class="info-principal">
+                                <h3>Isabela Giovana</h3>
+                                <div class="estrelas">★★★★★</div>
+                            </div>
+                        </div>
+                        <span class="data-avaliacao">12/11/2026</span>
+                        <p class="texto-comentario">"Experimentei o bolo de chocolate do chef Otávio e foi uma das melhores sobremesas que já comi! Atendimento rápido e muito educado."</p>
+                    </article>
+                    <!-- Card 7 -->
+                    <article class="card-avaliacao-medio">
+                        <div class="card-topo">
+                            <img src="img/clientes/clientemichael.png" alt="Foto de Michael" class="avatar-cliente">
+                            <div class="info-principal">
+                                <h3>Michael Lentz</h3>
+                                <div class="estrelas">★★★★★</div>
+                            </div>
+                        </div>
+                        <span class="data-avaliacao">01/11/2026</span>
+                    <p class="texto-comentario">"Foi uma experiência bem inusitada! Eu havia ido com minha esposa e meu filho para tomarmos um café. Nós adoramos o espaço, atendimento e a comida!"</p>
+                    </article>
+                     <article class="card-avaliacao-medio">
+                        <div class="card-topo">
+                            <img src="img/clientes/clienteenzo.png" alt="Foto de Enzo" class="avatar-cliente">
+                            <div class="info-principal">
+                                <h3>Enzo Frois</h3>
+                                <div class="estrelas">★★★☆☆</div>
+                            </div>
+                        </div>
+                        <span class="data-avaliacao">13/11/2026</span>
+                    <p class="texto-comentario">"Lugarzinho bacana!"</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+                <!-- FORMULÁRIO DE AVALIAÇÃO -->
+        <section class="secao-formulario-banner">
+            <form class="form-avaliacao" id="form-avaliacao" action="formAction.html" method="get" novalidate>
+                <input type="hidden" name="tipo" value="avaliacao">
+                <h2>Faça também sua avaliação sobre nós!</h2>
+
+                <div class="campo">
+                    <label for="nome">Seu nome <span class="obrigatorio" aria-hidden="true">*</span></label>
+                    <input type="text" id="nome" name="nome" required minlength="3"
+                           pattern="[A-Za-zÀ-ÿ'.\- ]{3,}" autocomplete="name"
+                           placeholder="Digite seu nome" aria-describedby="erro-nome">
+                    <p class="erro" id="erro-nome"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="data">Data da visita <span class="obrigatorio" aria-hidden="true">*</span></label>
+                    <input type="date" id="data" name="data" required aria-describedby="erro-data">
+                    <p class="erro" id="erro-data"></p>
+                </div>
+
+                <div class="campo">
+                    <label for="comentario">Seu comentário <span class="obrigatorio" aria-hidden="true">*</span></label>
+                    <textarea id="comentario" name="comentario" rows="4" required
+                              minlength="10" maxlength="200"
+                              placeholder="Escreva sua mensagem..."
+                              aria-describedby="erro-comentario"></textarea>
+                    <p class="contador" id="contador">0/200</p>
+                    <p class="erro" id="erro-comentario"></p>
+                </div>
+
+                <fieldset class="estrelas-grupo">
+                    <legend>Sua nota <span class="obrigatorio" aria-hidden="true">*</span></legend>
+                    <div class="estrelas-escolha">
+                        <!-- ordem 5,4,3,2,1 no HTML: o CSS (row-reverse) mostra 1 a 5 na tela -->
+                        <input type="radio" id="estrela5" name="avaliacao" value="5" aria-label="5 estrelas" required>
+                        <label for="estrela5">★</label>
+                        <input type="radio" id="estrela4" name="avaliacao" value="4" aria-label="4 estrelas">
+                        <label for="estrela4">★</label>
+                        <input type="radio" id="estrela3" name="avaliacao" value="3" aria-label="3 estrelas">
+                        <label for="estrela3">★</label>
+                        <input type="radio" id="estrela2" name="avaliacao" value="2" aria-label="2 estrelas">
+                        <label for="estrela2">★</label>
+                        <input type="radio" id="estrela1" name="avaliacao" value="1" aria-label="1 estrela">
+                        <label for="estrela1">★</label>
+                    </div>
+                    <p class="erro" id="erro-avaliacao"></p>
+                </fieldset>
+
+                <button type="submit" class="botao">Enviar avaliação</button>
+            </form>
+        </section>
+    </main>
+    <footer class="rodape">
+    <div class="rodape-grade">
+        <!-- Coluna da Esquerda: Links empilhados -->
+        <div class="rodape-links">
+            <a href="#instagram" aria-label="Instagram">Instagram</a>
+            <a href="#facebook" aria-label="Facebook">Facebook</a>
+            <a href="#localizacao" aria-label="Localização">Localização</a>
+            <a href="#contato" aria-label="Fale Conosco">Fale Conosco</a>
+        </div>
+
+        <!-- Centro: Deixado limpo / vazio de propósito -->
+        <div class="rodape-centro-vazio"></div>
+
+        <!-- Coluna da Direita: Símbolo em cima e texto embaixo -->
+        <div class="rodape-direita">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Ícone Grão & Prosa" width="32" height="32">
+                <span>Grão & Prosa</span>
+            </a>
+            <p>Um refúgio pixelado para boas conversas, livros e cafés passados na hora.</p>
+        </div>
+    </div>
+
+    <!-- Base Centralizada com a linha tracejada (trilhadinho) em cima -->
+    <div class="rodape-copyright">
+        <p>© 2026 Grão & Prosa. Todos os direitos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>

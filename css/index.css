@@ -1,0 +1,330 @@
+
+/* Caixa de boas-vindas sobre o banner */
+.boas-vindas {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 90%;
+    max-width: 800px;
+    margin: -3.5rem auto 0;
+}
+
+.boas-vindas h1 {
+    margin: 0 0 0.5rem;
+}
+
+.boas-vindas p {
+    margin: 0;
+}
+
+/* Cartões de destaque */
+.destaques {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 2.5rem auto;
+    padding: 0 1.2rem;
+}
+
+
+
+.cartao {
+    text-align: center;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.cartao.destacado {
+     z-index: 2;
+    transform: translateY(-8px) scale(1.03);
+
+}
+
+.cartao p {
+    margin: 0 0 1rem;
+}
+
+/* Seção de avaliações */
+.secao-avaliacoes-auto {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.cabecalho-avaliacoes {
+    max-width: 750px;
+    margin: 0 auto 30px;
+    line-height: 1.5;
+}
+
+/* Carrossel automático (só CSS) */
+.carrossel-simples {
+    overflow: hidden;
+    padding: 15px 0;
+}
+
+.trilho-infinito {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: rolarCards 34s linear infinite;
+}
+
+.trilho-infinito:hover {
+    animation-play-state: paused;
+}
+
+@keyframes rolarCards {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+/* quem prefere menos movimento no sistema vê os cards parados, com rolagem manual */
+@media (prefers-reduced-motion: reduce) {
+    .trilho-infinito { animation: none; }
+    .carrossel-simples { overflow-x: auto; }
+}
+
+/* Card de avaliação */
+.card-avaliacao-medio {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    min-height: 260px;
+    padding: 20px;
+    text-align: left;
+    background: var(--bege);
+    border: 4px solid var(--preto);
+    box-shadow: 4px 4px 0 var(--marrom-escuro);
+}
+
+.card-topo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.avatar-cliente {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--preto);
+}
+
+.info-principal h3 {
+    margin: 0 0 3px;
+    font-size: 1rem;
+}
+
+.estrelas {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: #d48c1c;
+}
+
+.data-avaliacao {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    opacity: 0.75;
+}
+
+.texto-comentario {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+/* Formulário de avaliação sobre a foto */
+.secao-formulario-banner {
+    display: flex;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 60px 20px;
+    background: url("../img/cafe.png") center / cover;
+    border: 4px solid var(--preto);
+    box-shadow: 6px 6px 0 var(--marrom-escuro);
+}
+
+.form-avaliacao {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background: var(--bege);
+    border: 4px solid var(--preto);
+    box-shadow: 6px 6px 0 var(--marrom-escuro);
+}
+
+.form-avaliacao h2 {
+    margin: 0;
+    text-align: center;
+}
+
+/* Estrelas de escolha (1 a 5) */
+.estrelas-grupo {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.estrelas-grupo legend {
+    margin-bottom: 5px;
+    padding: 0;
+    font-size: 1.4rem;
+}
+
+.estrelas-escolha {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;   /* no HTML a ordem é 5,4,3,2,1; na tela aparece 1,2,3,4,5 */
+    justify-content: flex-end;
+    width: fit-content;
+}
+
+.estrelas-escolha input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;                    /* escondido, mas ainda funciona com teclado e validação */
+}
+
+.estrelas-escolha label {
+    padding: 0 3px;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--marrom-claro);    /* estrela vazia */
+    cursor: pointer;
+}
+
+/* acende a estrela marcada e todas à esquerda dela (as de nota menor) */
+.estrelas-escolha input:checked ~ label,
+.estrelas-escolha label:hover,
+.estrelas-escolha label:hover ~ label {
+    color: var(--vinho);
+}
+
+.estrelas-escolha input:focus-visible + label {
+    outline: 3px solid var(--marrom-claro);
+}
+
+.rodape {
+    margin-top: 3rem;
+    padding: 2rem 1.5rem 1.2rem;
+    background: var(--preto);
+    color: var(--bege);
+    border-top: 6px solid var(--vinho);
+}
+
+.rodape-grade {
+    display: flex;
+    justify-content: space-between; /* Joga um bloco na extrema esquerda e o outro na extrema direita */
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto 1.5rem;
+    padding: 0 1rem; /* Garante um respiro nas bordas extremas da página */
+}
+
+/* Esquerda: Links empilhados */
+.rodape-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.rodape-links a {
+    color: var(--marrom-claro);
+    font-family: var(--fonte-texto);
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.1s;
+}
+
+.rodape-links a:hover,
+.rodape-links a:focus-visible {
+    color: var(--bege);
+    transform: translateX(4px);
+}
+
+/* Direita: Logo e texto alinhados à direita da página */
+.rodape-direita {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Joga a logo e o texto colados na margem direita */
+    text-align: right;
+    gap: 0.8rem;
+}
+
+.rodape-direita .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    color: var(--bege);
+}
+
+.rodape-direita img {
+    image-rendering: pixelated;
+}
+
+.rodape-direita p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    max-width: 260px;
+    color: var(--bege);
+}
+
+/* Base: Linha tracejada (trilhadinho) e direitos centralizados */
+.rodape-copyright {
+    border-top: 2px dashed var(--marrom-escuro);
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.rodape-copyright p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--bege);
+}
+
+/* Responsividade para celulares */
+@media (max-width: 760px) {
+    .rodape-grade {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .rodape-links {
+        align-items: center;
+    }
+
+    .rodape-direita {
+        align-items: center;
+        text-align: center;
+    }
+
+    .rodape-direita p {
+        margin: 0 auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cartao {
+        transition: none;
+    }
+}

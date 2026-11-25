@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grão &amp; Prosa | Cardápio</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/cardapio.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="js/cardapio.js" defer></script>
+    <script src="js/menu.js" defer></script>
+</head>
+<body>
+    <div class="top-bar"></div>
+    <header class="topo">
+        <a class="logo" href="index.html">
+            <img src="img/logo.png" alt="" width="53" height="56">
+            <span>Grão & Prosa</span>
+        </a>
+
+        <button id="btn-menu" class="btn-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>       
+        <nav id="menu" class="menu" aria-label="Menu principal">
+            
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html" aria-current="page">Cardápio</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
+                <li><a href="form.html">Reservas</a></li>
+                <li><a href="about.html">Sobre</a></li>
+            </ul>
+        </nav>
+        <!-- Ícones -->
+        <div class="acoes">
+            <a href="entrar.html" aria-label="Minha conta">
+                <i class="bi bi-person"></i>
+            </a>
+            
+            <a href="carrinho.html" aria-label="Meu carrinho">
+                <i class="bi bi-cart3"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img class="banner" src="img/local/balcao.png" alt="">
+            <div class="titulo-pagina caixa">
+                <h1>Confira nossas delícias!</h1>
+                <p>Pratos para todos os gostos e paladares.</p>
+            </div>
+        </section>
+
+        <div class="caixa-cardapio">
+
+            <!-- Página 1: Carros-chefes -->
+            <div class="pagina-cardapio ativa" id="pagina-1">
+                <section class="secao-menu">
+                    <h2 class="titulo-secao">Carros-chefes da Casa</h2>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Cheesecake de Frutas Vermelhas</span>
+                            <span class="preco">R$ 12,90</span>
+                        </h3>
+                        <p class="desc-prato">Base crocante de biscoito, creme suave de iogurte grego e calda artesanal de frutas vermelhas.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Cinnamon Rolls</span>
+                            <span class="preco">R$ 6,00</span>
+                        </h3>
+                        <p class="desc-prato">Enroladinhos de canela fofinhos, assados na hora e cobertos com um glacê cremoso.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Marta Rocha</span>
+                            <span class="preco">R$ 19,00</span>
+                        </h3>
+                        <p class="desc-prato">O bolo mais clássico da cidade! Pão de ló de chocolate, nozes crocantes, suspiro, geleia de damasco e fios de ovos para decorar.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Bombom de Chocolate e Calda de Maracujá</span>
+                            <span class="preco">R$ 7,00</span>
+                        </h3>
+                        <p class="desc-prato">Bombom de chocolate com calda de maracujá e sementes azedinhas que estouram na boca.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Céu</span>
+                            <span class="preco">R$ 5,00</span>
+                        </h3>
+                        <p class="desc-prato">Suspiro leve, crocante por fora e derretido por dentro, coberto por uma camada de chocolate.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Chocolate Quente com Suspiro</span>
+                            <span class="preco">R$ 16,00</span>
+                        </h3>
+                        <p class="desc-prato">Chocolate quente servido com uma pequena bola de suspiro coberta de chocolate, que derrete na xícara e se abre aos poucos.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Pudim de Ninho com Caramelo</span>
+                            <span class="preco">R$ 13,50</span>
+                        </h3>
+                        <p class="desc-prato">Pudim cremoso de leite Ninho com um toque de leite condensado, coberto por calda de caramelo dourada e brilhante.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Bolo de Chocolate do Chef Otávio</span>
+                            <span class="preco">R$ 14,00</span>
+                        </h3>
+                        <p class="desc-prato">Massa úmida de chocolate meio amargo, recheada e coberta com ganache brilhante.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Brownie com Sorvete de Creme</span>
+                            <span class="preco">R$ 15,00</span>
+                        </h3>
+                        <p class="desc-prato">Brownie quentinho, úmido por dentro e crocante por fora, servido com uma bola de sorvete de creme.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Tiramisù de Café</span>
+                            <span class="preco">R$ 16,50</span>
+                        </h3>
+                        <p class="desc-prato">Camadas de biscoito embebido em café e creme de mascarpone, finalizado com cacau em pó.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Brigadeiro de Colher</span>
+                            <span class="preco">R$ 5,50</span>
+                        </h3>
+                        <p class="desc-prato">Chocolate cremoso servido em potinho, com granulado crocante por cima.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Mil-folhas de Doce de Leite</span>
+                            <span class="preco">R$ 11,00</span>
+                        </h3>
+                        <p class="desc-prato">Camadas finas e crocantes de massa folhada, intercaladas com creme de baunilha e doce de leite.</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Página 2: Doces e Salgados -->
+            <div class="pagina-cardapio" id="pagina-2">
+                <section class="secao-menu">
+                    <h2 class="titulo-secao">Doces</h2>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Bolo de Cenoura com Chocolate</span>
+                            <span class="preco">R$ 10,50</span>
+                        </h3>
+                        <p class="desc-prato">Fofinho, feito na hora, coberto com uma generosa camada de chocolate caseiro.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Tortinha de Limão</span>
+                            <span class="preco">R$ 11,90</span>
+                        </h3>
+                        <p class="desc-prato">Massa crocante com recheio cremoso e equilibrado de limão fresco.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Dadinhos de Doce de Leite</span>
+                            <span class="preco">R$ 8,50</span>
+                        </h3>
+                        <p class="desc-prato">Pequenos cubos de doce de leite, cobertos por uma fina camada de açúcar de confeiteiro e fios de caramelo.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Cookies</span>
+                            <span class="preco">R$ 9,00</span>
+                        </h3>
+                        <p class="desc-prato">Crocantes por fora e macios por dentro, com recheio generoso e gotas de chocolate.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Cupcakes</span>
+                            <span class="preco">R$ 9,50</span>
+                        </h3>
+                        <p class="desc-prato">Bolinhos fofinhos com glacê firme e brilhante.</p>
+                    </div>
+                </section>
+
+                <section class="secao-menu">
+                    <h2 class="titulo-secao">Salgados</h2>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Pão de Queijo Artesanal</span>
+                            <span class="preco">R$ 6,50</span>
+                        </h3>
+                        <p class="desc-prato">Feito com queijo curado da serra, crocante por fora e macio por dentro.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Quiche de Alho-Poró</span>
+                            <span class="preco">R$ 14,00</span>
+                        </h3>
+                        <p class="desc-prato">Massa leve recheada com creme delicado e alho-poró refogado na manteiga.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Croissant de Presunto e Queijo</span>
+                            <span class="preco">R$ 15,50</span>
+                        </h3>
+                        <p class="desc-prato">Massa folhada amanteigada, assada na hora, com presunto e queijo derretido.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Torrada Rústica com Ricota</span>
+                            <span class="preco">R$ 13,00</span>
+                        </h3>
+                        <p class="desc-prato">Pão de fermentação natural, ricota temperada, tomate-cereja e folhas de manjericão.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Mini Empada de Frango</span>
+                            <span class="preco">R$ 8,00</span>
+                        </h3>
+                        <p class="desc-prato">Massa amanteigada que desmancha na boca, recheada com frango desfiado e requeijão cremoso.</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Página 3: Bebidas e Especiais -->
+            <div class="pagina-cardapio" id="pagina-3">
+                <section class="secao-menu">
+                    <h2 class="titulo-secao">Bebidas e Especiais</h2>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Café Expresso da Casa</span>
+                            <span class="preco">R$ 7,00</span>
+                        </h3>
+                        <p class="desc-prato">Grãos selecionados com notas de chocolate e aroma marcante.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Cappuccino Cremoso</span>
+                            <span class="preco">R$ 11,50</span>
+                        </h3>
+                        <p class="desc-prato">Café espresso, leite vaporizado, cacau em pó e um toque de canela.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Mocha Coffee</span>
+                            <span class="preco">R$ 12,90</span>
+                        </h3>
+                        <p class="desc-prato">Café espresso, leite vaporizado, aroma de chocolate e um toque de adoçante.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Coffee de Doce de Leite</span>
+                            <span class="preco">R$ 13,50</span>
+                        </h3>
+                        <p class="desc-prato">Café espresso, leite vaporizado, calda de doce de leite ao fundo da xícara.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Pingado</span>
+                            <span class="preco">R$ 6,50</span>
+                        </h3>
+                        <p class="desc-prato">Café preto tradicionalmente brasileiro, com leite vaporizado na medida certa.</p>
+                    </div>
+                    <div class="item-menu">
+                        <h3 class="nome-prato">
+                            <span>Coffee Tonic</span>
+                            <span class="preco">R$ 14,00</span>
+                        </h3>
+                        <p class="desc-prato">Espresso duplo extraído sobre água tônica gelada e fatia de limão siciliano.</p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="paginacao-controles">
+                <button id="btn-anterior" class="btn-pagina" type="button" disabled>← Anterior</button>
+                <span id="indicador-pagina" aria-live="polite">Página 1 de 3</span>
+                <button id="btn-proximo" class="btn-pagina" type="button">Próxima →</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+    <div class="rodape-grade">
+        <!-- Coluna da Esquerda: Links empilhados -->
+        <div class="rodape-links">
+            <a href="#instagram" aria-label="Instagram">Instagram</a>
+            <a href="#facebook" aria-label="Facebook">Facebook</a>
+            <a href="#localizacao" aria-label="Localização">Localização</a>
+            <a href="#contato" aria-label="Fale Conosco">Fale Conosco</a>
+        </div>
+
+        <!-- Centro: Deixado limpo / vazio de propósito -->
+        <div class="rodape-centro-vazio"></div>
+
+        <!-- Coluna da Direita: Símbolo em cima e texto embaixo -->
+        <div class="rodape-direita">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Ícone Grão & Prosa" width="32" height="32">
+                <span>Grão & Prosa</span>
+            </a>
+            <p>Um refúgio pixelado para boas conversas, livros e cafés passados na hora.</p>
+        </div>
+    </div>
+
+    <!-- Base Centralizada com a linha tracejada (trilhadinho) em cima -->
+    <div class="rodape-copyright">
+        <p>© 2026 Grão & Prosa. Todos os direitos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>

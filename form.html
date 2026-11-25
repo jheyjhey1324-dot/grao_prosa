@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grão &amp; Prosa | Reservas</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="js/menu.js" defer></script>
+    <script src="js/validacao.js" defer></script>
+    <script src="js/form.js" defer></script>
+</head>
+<body>
+    <div class="top-bar"></div>
+    <header class="topo">
+        <a class="logo" href="index.html">
+            <img src="img/logo.png" alt="" width="53" height="56">
+            <span>Grão &amp; Prosa</span>
+        </a>
+
+        <button id="btn-menu" class="btn-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>       
+        <nav id="menu" class="menu" aria-label="Menu principal">
+            
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
+                <li><a href="form.html" aria-current="page">Reservas</a></li>
+                <li><a href="about.html">Sobre</a></li>
+            </ul>
+        </nav>
+        <!-- Ícones -->
+        <div class="acoes">
+            <a href="entrar.html" aria-label="Minha conta">
+                <i class="bi bi-person"></i>
+            </a>
+            
+            <a href="carrinho.html" aria-label="Meu carrinho">
+                <i class="bi bi-cart3"></i>
+            </a>
+        </div>
+    </header>
+    
+    <main>
+         <section class="hero">
+             <img class="banner" src="img/local/balcao.png" alt="">
+              <div class="titulo-pagina caixa">
+                 <h1>Reserve sua mesa</h1>
+                 <p>Preencha os dados e guardamos um lugar para você.</p>
+                </div>
+            </section>
+             <p class="aviso-obrigatorio">Campos com <span class="obrigatorio" aria-hidden="true">*</span> são obrigatórios.</p>
+             <form class="formulario" id="form-reserva" action="formAction.html" method="get" novalidate>
+                <input type="hidden" name="tipo" value="reserva">
+                <fieldset class="bloco-dados">
+                    <legend class="icone-pessoa">Seus dados</legend>
+                    <div class="campo">
+                        <label for="nome">Nome completo <span class="obrigatorio" aria-hidden="true">*</span></label>
+                        <input type="text" id="nome" name="nome" required minlength="3"
+                        pattern="[A-Za-zÀ-ÿ ]{3,}" autocomplete="name"
+                        placeholder="Digite seu nome completo"
+                        aria-describedby="erro-nome">
+                        <p class="erro" id="erro-nome"></p>
+                    </div>
+                    <div class="campo">
+                        <label for="email">E-mail <span class="obrigatorio" aria-hidden="true">*</span></label>
+                        <input type="email" id="email" name="email" required autocomplete="email"
+                        placeholder="seu@email.com"
+                        aria-describedby="erro-email">
+                        <p class="erro" id="erro-email"></p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone <span class="obrigatorio" aria-hidden="true">*</span></label>
+                        <input type="tel" id="telefone" name="telefone" required autocomplete="tel"
+                        pattern="\(\d{2}\) \d{5}-\d{4}"
+                        title="Use o formato (41) 99999-9999"
+                        placeholder="(41) 99999-9999"
+                        aria-describedby="erro-telefone">
+                    <p class="erro" id="erro-telefone"></p>
+                </div>
+            </fieldset>
+            <fieldset class="bloco-reserva">
+                  <legend class="icone-calendario">Sua reserva</legend>
+                <div class="campo">
+                    <label for="data">Data <span class="obrigatorio" aria-hidden="true">*</span></label>
+                    <input type="date" id="data" name="data" required aria-describedby="erro-data">
+                    <p class="erro" id="erro-data"></p>
+                </div>
+                <div class="campo">
+                    <label for="horario">Horário <span class="obrigatorio" aria-hidden="true">*</span></label>
+                    <select id="horario" name="horario" required aria-describedby="erro-horario">
+                        <option value="">Selecione um horário</option>
+                    </select>
+                    <p class="erro" id="erro-horario"></p>
+                </div>
+                <div class="campo">
+                    <label for="pessoas">Número de pessoas <span class="obrigatorio" aria-hidden="true">*</span></label>
+                    <input type="number" id="pessoas" name="pessoas" required min="1" max="10" value="1"
+                     aria-describedby="erro-pessoas">
+                     <p class="erro" id="erro-pessoas"></p>
+                    </div>
+                    <fieldset class="grupo-ambiente">
+                        <legend>Ambiente <span class="obrigatorio" aria-hidden="true">*</span></legend>
+                        <label class="opcao"><input type="radio" name="ambiente" value="salao" required> Salão</label>
+                        <label class="opcao"><input type="radio" name="ambiente" value="varanda"> Varanda</label>
+                        <label class="opcao"><input type="radio" name="ambiente" value="balcao"> Balcão</label>
+                        <p class="erro" id="erro-ambiente"></p>
+                    </fieldset>
+                </fieldset>
+                
+                <fieldset class="bloco-detalhes">
+                    <legend class="icone-balao">Mais detalhes</legend>
+                    <div class="campo">
+                        <label for="observacoes">Observações <span class="obrigatorio" aria-hidden="true">*</span></label>
+                        <textarea id="observacoes" name="observacoes" rows="4" required
+                        minlength="10" maxlength="200"
+                        placeholder="Conte pra gente se tem alguma preferência especial..."
+                        aria-describedby="erro-observacoes"></textarea>
+                        <p class="contador" id="contador">0/200</p>
+                        <p class="erro" id="erro-observacoes"></p>
+                    </div>
+                    <div class="campo">
+                        <label class="opcao">
+                            <input type="checkbox" id="aceite" name="aceite" value="sim" required aria-describedby="erro-aceite">
+                            Autorizo o uso destes dados para confirmar minha reserva.
+                            <span class="obrigatorio" aria-hidden="true">*</span>
+                        </label>
+                        <p class="erro" id="erro-aceite"></p>
+                    </div>
+                    <div class="acoes">
+                        <button class="botao" type="submit">Enviar reserva</button>
+                        <button class="botao botao-secundario" type="reset">Limpar</button>
+                    </div>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer class="rodape">
+    <div class="rodape-grade">
+        <!-- Coluna da Esquerda: Links empilhados -->
+        <div class="rodape-links">
+            <a href="#instagram" aria-label="Instagram">Instagram</a>
+            <a href="#facebook" aria-label="Facebook">Facebook</a>
+            <a href="#localizacao" aria-label="Localização">Localização</a>
+            <a href="#contato" aria-label="Fale Conosco">Fale Conosco</a>
+        </div>
+
+        <!-- Centro: Deixado limpo / vazio de propósito -->
+        <div class="rodape-centro-vazio"></div>
+
+        <!-- Coluna da Direita: Símbolo em cima e texto embaixo -->
+        <div class="rodape-direita">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Ícone Grão & Prosa" width="32" height="32">
+                <span>Grão & Prosa</span>
+            </a>
+            <p>Um refúgio pixelado para boas conversas, livros e cafés passados na hora.</p>
+        </div>
+    </div>
+
+    <!-- Base Centralizada com a linha tracejada (trilhadinho) em cima -->
+    <div class="rodape-copyright">
+        <p>© 2026 Grão & Prosa. Todos os direitos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>

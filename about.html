@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grão &amp; Prosa | Sobre Nós</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="js/menu.js" defer></script>
+</head>
+<body>
+    <div class="top-bar"></div>
+    <header class="topo">
+        <a class="logo" href="index.html">
+            <img src="img/logo.png" alt="" width="53" height="56">
+            <span>Grão & Prosa</span>
+        </a>
+        
+        <button id="btn-menu" class="btn-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>       
+        <nav id="menu" class="menu" aria-label="Menu principal">
+
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
+                <li><a href="form.html">Reservas</a></li>
+                <li><a href="about.html" aria-current="page">Sobre</a></li>
+            </ul>
+        </nav>
+        <!-- Ícones -->
+        <div class="acoes">
+            <a href="entrar.html" aria-label="Minha conta">
+                <i class="bi bi-person"></i>
+            </a>
+            
+            <a href="carrinho.html" aria-label="Meu carrinho">
+                <i class="bi bi-cart3"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Banner e Caixa de Título -->
+        <section class="hero">
+            <img class="banner" src="img/local/balcao.png" alt="">
+            <div class="titulo-pagina caixa">
+                <h1>Nossa História</h1>
+                <p>Onde o aroma do café encontra boas conversas.</p>
+            </div>
+        </section>
+
+        <div class="conteudo-sobre">
+            
+            <!-- Pequeno texto introdutório abaixo da caixa do título -->
+            <p class="introducao-sobre">
+                A Grão & Prosa nasceu do desejo simples de desacelerar o tempo. Mais do que servir cafés especiais, criamos um refúgio acolhedor para leitores, sonhadores e amantes de uma boa prosa.
+            </p>
+
+            <!-- Bloco 1: Foto na Esquerda + Texto na Direita -->
+            <section class="bloco-ziguezague">
+                <div class="bloco-imagem">
+                    <img src="img/local/cafeeprosa.png" alt="Interior aconchegante da cafeteria Grão e Prosa">
+                </div>
+                <div class="bloco-texto alinhar-direita">
+                    <h2>O Aroma da Tradição</h2>
+                    <p>
+                        Cada xícara começa na escolha cuidadosa de grãos selecionados de pequenos produtores. Torramos e preparamos cada bebida artesanalmente para despertar memórias afetivas logo no primeiro gole.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Bloco 2: Texto na Esquerda + Foto na Direita (visual invertido) -->
+            <section class="bloco-ziguezague invertido">
+                <div class="bloco-imagem">
+                    <img src="img/local/vitrine.png" alt="Vitrine com doces artesanais feitos na casa">
+                </div>
+                <div class="bloco-texto alinhar-esquerda">
+                    <h2>Receitas com Afeto</h2>
+                    <p>
+                        Nossa cozinha funciona no ritmo caseiro: bolos saindo do forno à tarde, suspiros crocantes e salgados folhados que transformam qualquer pausa rápida em um momento especial do seu dia.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Texto de Conclusão Limpo e Centralizado -->
+            <section class="conclusao-sobre">
+                <p>
+                    Seja para escrever as páginas do seu próximo projeto, colocar a leitura em dia ou simplesmente compartilhar risadas à mesa, há sempre uma cadeira esperando por você na Grão & Prosa.
+                </p>
+            </section>
+            <section class="sobre-projeto">
+                <h2>Sobre este projeto</h2>
+                <p>Site desenvolvido como avaliação somativa de front-end por <strong>Jheimily Railayne Kostolivicz Pereira</strong>, estudante de Análise e Desenvolvimento de Sistemas na PUCPR, usando apenas HTML, CSS e JavaScript.</p>
+                <ul>
+                    <li>HTML: estrutura semântica (header, nav, main, section, article, form, fieldset).</li>
+                    <li>CSS: um arquivo global e um por página, com variáveis de cor, Flexbox, Grid e media queries.</li>
+                    <li>JavaScript: paginação do cardápio, avaliação da equipe, leitura dos dados enviados por GET, menu para celular e máscara de telefone.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="rodape">
+    <div class="rodape-grade">
+        <!-- Coluna da Esquerda: Links empilhados -->
+        <div class="rodape-links">
+            <a href="#instagram" aria-label="Instagram">Instagram</a>
+            <a href="#facebook" aria-label="Facebook">Facebook</a>
+            <a href="#localizacao" aria-label="Localização">Localização</a>
+            <a href="#contato" aria-label="Fale Conosco">Fale Conosco</a>
+        </div>
+
+        <!-- Centro: Deixado limpo / vazio de propósito -->
+        <div class="rodape-centro-vazio"></div>
+
+        <!-- Coluna da Direita: Símbolo em cima e texto embaixo -->
+        <div class="rodape-direita">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Ícone Grão & Prosa" width="32" height="32">
+                <span>Grão & Prosa</span>
+            </a>
+            <p>Um refúgio pixelado para boas conversas, livros e cafés passados na hora.</p>
+        </div>
+    </div>
+
+    <!-- Base Centralizada com a linha tracejada (trilhadinho) em cima -->
+    <div class="rodape-copyright">
+        <p>© 2026 Grão & Prosa. Todos os direitos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>

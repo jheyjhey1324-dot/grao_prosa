@@ -1,0 +1,185 @@
+/* Centraliza a área principal de feedback */
+.conteudo-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 40px 20px;
+}
+
+/* Caixa principal com o visual pixel art do site */
+.bloco-resultado-acao {
+    width: 100%;
+    max-width: 600px;
+    background-color: #f4ece1;
+    border: 4px solid #1a110b;
+    box-shadow: 6px 6px 0px #2b1d14;
+    padding: 35px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.bloco-resultado-acao h1 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: #6b242c;
+}
+
+/* Caixa interna onde os dados recuperados do GET aparecem */
+.caixa-dados-capturados {
+    background: #fffdf9;
+    border: 3px solid #1a110b;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: left;
+    font-family: inherit;
+    color: #1a110b;
+}
+
+.acoes-retorno {
+    margin-top: 25px;
+}
+
+/* Grão & Prosa - formAction.css */
+
+.resumo {
+    width: 92%;
+    max-width: 760px;
+    margin: 2rem auto;
+}
+
+.resumo h2 {
+    margin-top: 0;
+}
+
+.resumo dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.6rem 1.5rem;
+    margin: 0;
+}
+
+.resumo dt {
+    font-family: var(--fonte-titulo);
+    font-size: 0.7rem;
+    color: var(--vinho);
+}
+
+.resumo dd {
+    margin: 0;
+    overflow-wrap: anywhere;      /* palavras gigantes não estouram a caixa */
+}
+
+.acoes-pagina {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .resumo dl { grid-template-columns: 1fr; }
+}
+
+
+.rodape {
+    margin-top: 3rem;
+    padding: 2rem 1.5rem 1.2rem;
+    background: var(--preto);
+    color: var(--bege);
+    border-top: 6px solid var(--vinho);
+}
+
+.rodape-grade {
+    display: flex;
+    justify-content: space-between; /* Joga um bloco na extrema esquerda e o outro na extrema direita */
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto 1.5rem;
+    padding: 0 1rem; /* Garante um respiro nas bordas extremas da página */
+}
+
+/* Esquerda: Links empilhados */
+.rodape-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.rodape-links a {
+    color: var(--marrom-claro);
+    font-family: var(--fonte-texto);
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.1s;
+}
+
+.rodape-links a:hover,
+.rodape-links a:focus-visible {
+    color: var(--bege);
+    transform: translateX(4px);
+}
+
+/* Direita: Logo e texto alinhados à direita da página */
+.rodape-direita {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Joga a logo e o texto colados na margem direita */
+    text-align: right;
+    gap: 0.8rem;
+}
+
+.rodape-direita .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    color: var(--bege);
+}
+
+.rodape-direita img {
+    image-rendering: pixelated;
+}
+
+.rodape-direita p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    max-width: 260px;
+    color: var(--bege);
+}
+
+/* Base: Linha tracejada (trilhadinho) e direitos centralizados */
+.rodape-copyright {
+    border-top: 2px dashed var(--marrom-escuro);
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.rodape-copyright p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--bege);
+}
+
+/* Responsividade para celulares */
+@media (max-width: 760px) {
+    .rodape-grade {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .rodape-links {
+        align-items: center;
+    }
+
+    .rodape-direita {
+        align-items: center;
+        text-align: center;
+    }
+
+    .rodape-direita p {
+        margin: 0 auto;
+    }
+}

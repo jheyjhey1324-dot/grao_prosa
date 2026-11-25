@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grão &amp; Prosa | Equipe</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/equipe.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="js/equipe.js" defer></script>
+    <script src="js/menu.js" defer></script>
+</head>
+<body>
+    <div class="top-bar"></div>
+    <header class="topo">
+        <a class="logo" href="index.html">
+            <img src="img/logo.png" alt="" width="53" height="56">
+            <span>Grão &amp; Prosa</span>
+        </a>
+
+        <button id="btn-menu" class="btn-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>       
+        <nav id="menu" class="menu" aria-label="Menu principal">
+            
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="equipe.html" aria-current="page">Equipe</a></li>
+                <li><a href="form.html">Reservas</a></li>
+                <li><a href="about.html">Sobre</a></li>
+            </ul>
+        </nav>
+        <!-- Ícones -->
+        <div class="acoes">
+            <a href="entrar.html" aria-label="Minha conta">
+                <i class="bi bi-person"></i>
+            </a>
+            
+            <a href="carrinho.html" aria-label="Meu carrinho">
+                <i class="bi bi-cart3"></i>
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <img class="banner" src="img/local/balcao.png" alt="">
+            <div class="titulo-pagina caixa">
+                <h1>Conheça nossa equipe!</h1>
+                <p>Você pode avaliar o atendimento de cada um deles.</p>
+            </div>
+        </section>
+        <section class="introducao-equipe">
+            <section class="grid-cards-equipe">
+                <article class="card-membro">
+                    <img src="img/equipe/diana.png" alt="Foto da Diana, a garçonete." class="foto-garconete1">
+                    <div class="caixa-texto-membro">
+                        <h2>Diana</h2>
+                        <p>Nossa garçonete radiante!  Ela chega à mesa já conversando com você super simpática e alegre.</p>
+                        <!-- Sistema de estrelas individual para este card -->
+                        <div class="estrelas-card">
+                            <input type="radio" name="aval-diana" id="diana-5" value="5"><label for="diana-5">★</label>
+                            <input type="radio" name="aval-diana" id="diana-4" value="4"><label for="diana-4">★</label>
+                            <input type="radio" name="aval-diana" id="diana-3" value="3"><label for="diana-3">★</label>
+                            <input type="radio" name="aval-diana" id="diana-2" value="2"><label for="diana-2">★</label>
+                            <input type="radio" name="aval-diana" id="diana-1" value="1"><label for="diana-1">★</label>
+                        </div>
+                        <p class="aviso-nota" aria-live="polite"></p>
+                    </div>
+                </article>
+            <article class="card-membro">
+                <img src="img/equipe/leona.png" alt="Foto da Leona, a garçonete." class="foto-garconete2">
+                <div class="caixa-texto-membro">
+                    <h2>Leona</h2>
+                    <p>Nossa garçonete é apaixonada por animais! Ela é um pouco tímida, mas Leona conquista pelos seus cuidados aos pets!</p>
+                    <!-- Sistema de estrelas individual para este card -->
+                     <div class="estrelas-card">
+                        <input type="radio" name="aval-leona" id="leona-5" value="5"><label for="leona-5">★</label>
+                        <input type="radio" name="aval-leona" id="leona-4" value="4"><label for="leona-4">★</label>
+                        <input type="radio" name="aval-leona" id="leona-3" value="3"><label for="leona-3">★</label>
+                        <input type="radio" name="aval-leona" id="leona-2" value="2"><label for="leona-2">★</label>
+                        <input type="radio" name="aval-leona" id="leona-1" value="1"><label for="leona-1">★</label>
+                    </div>
+                    <p class="aviso-nota" aria-live="polite"></p>
+                </div>
+            </article>
+        <article class="card-membro">
+            <img src="img/equipe/catarina.png" alt="Foto da Catarina, barista" class="foto-balconista">
+            <div class="caixa-texto-membro">
+                <h2>Catarina</h2>
+                <p> A nossa barista, ela adora escutar as histórias e relatos dos clientes que se aproximam do balcão!</p>
+                <!-- Sistema de estrelas individual para este card -->
+                 <div class="estrelas-card">
+                    <input type="radio" name="aval-catarina" id="catarina-5" value="5"><label for="catarina-5">★</label>
+                    <input type="radio" name="aval-catarina" id="catarina-4" value="4"><label for="catarina-4">★</label>
+                    <input type="radio" name="aval-catarina" id="catarina-3" value="3"><label for="catarina-3">★</label>
+                    <input type="radio" name="aval-catarina" id="catarina-2" value="2"><label for="catarina-2">★</label>
+                    <input type="radio" name="aval-catarina" id="catarina-1" value="1"><label for="catarina-1">★</label>
+                </div>
+                <p class="aviso-nota" aria-live="polite"></p>
+            </div>
+        </article>
+        <article class="card-membro">
+            <img src="img/equipe/sra_pompemayer.png" alt="Foto da Sra. Pompemayer, a gerente." class="foto-gerente">
+            <div class="caixa-texto-membro">
+                <h2>Sra. Pompemayer</h2>
+                <p>Nossa gerente, sábia e querida. Foi ela quem trouxe a ideia do nome Grão &amp; Prosa, afinal, quem não ama tomar um bom café e conversar?</p>
+                <!-- Sistema de estrelas individual para este card -->
+                 <div class="estrelas-card">
+                    <input type="radio" name="aval-srapompemayer" id="srapompemayer-5" value="5"><label for="srapompemayer-5">★</label>
+                    <input type="radio" name="aval-srapompemayer" id="srapompemayer-4" value="4"><label for="srapompemayer-4">★</label>
+                    <input type="radio" name="aval-srapompemayer" id="srapompemayer-3" value="3"><label for="srapompemayer-3">★</label>
+                    <input type="radio" name="aval-srapompemayer" id="srapompemayer-2" value="2"><label for="srapompemayer-2">★</label>
+                    <input type="radio" name="aval-srapompemayer" id="srapompemayer-1" value="1"><label for="srapompemayer-1">★</label>
+                </div>
+                <p class="aviso-nota" aria-live="polite"></p>
+            </div>
+        </article>
+        <article class="card-membro">
+            <img src="img/equipe/otavio.png" alt="Foto do Otávio, o chef confeiteiro." class="foto-confeiteiro">
+            <div class="caixa-texto-membro">
+                <h2>Otávio</h2>
+                <p>Nosso confeiteiro de mãos delicadas e um coração enorme! Ele conquista e encanta os clientes com seus doces artesanais e delícias.</p>
+                <!-- Sistema de estrelas individual para este card -->
+                 <div class="estrelas-card">
+                    <input type="radio" name="aval-otavio" id="otavio-5" value="5"><label for="otavio-5">★</label>
+                    <input type="radio" name="aval-otavio" id="otavio-4" value="4"><label for="otavio-4">★</label>
+                    <input type="radio" name="aval-otavio" id="otavio-3" value="3"><label for="otavio-3">★</label>
+                    <input type="radio" name="aval-otavio" id="otavio-2" value="2"><label for="otavio-2">★</label>
+                    <input type="radio" name="aval-otavio" id="otavio-1" value="1"><label for="otavio-1">★</label>
+                </div>
+                <p class="aviso-nota" aria-live="polite"></p>
+            </div>
+           </article>
+        </section>         
+</main>
+
+    <footer class="rodape">
+    <div class="rodape-grade">
+        <!-- Coluna da Esquerda: Links empilhados -->
+        <div class="rodape-links">
+            <a href="#instagram" aria-label="Instagram">Instagram</a>
+            <a href="#facebook" aria-label="Facebook">Facebook</a>
+            <a href="#localizacao" aria-label="Localização">Localização</a>
+            <a href="#contato" aria-label="Fale Conosco">Fale Conosco</a>
+        </div>
+
+        <!-- Centro: Deixado limpo / vazio de propósito -->
+        <div class="rodape-centro-vazio"></div>
+
+        <!-- Coluna da Direita: Símbolo em cima e texto embaixo -->
+        <div class="rodape-direita">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Ícone Grão & Prosa" width="32" height="32">
+                <span>Grão & Prosa</span>
+            </a>
+            <p>Um refúgio pixelado para boas conversas, livros e cafés passados na hora.</p>
+        </div>
+    </div>
+
+    <!-- Base Centralizada com a linha tracejada (trilhadinho) em cima -->
+    <div class="rodape-copyright">
+        <p>© 2026 Grão & Prosa. Todos os direitos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>
